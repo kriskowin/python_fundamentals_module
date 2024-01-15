@@ -1,0 +1,15 @@
+coffees = 0
+command = ''
+while command != 'END':
+    command = input()
+ 
+    if command.lower():
+        coffees += 1
+    elif command.upper():
+        coffees += 2
+          
+if coffees < 5:
+    print(coffees)
+else:
+    print('You need extra sleep')
+
