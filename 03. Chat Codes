@@ -1,0 +1,15 @@
+num = int(input())
+# •	If the number is 88 - "Hello"
+# •	If the number is 86 - "How are you?"
+# •	If the number is not 88 nor 86, and it is below 88 - "GREAT!"
+# •	If the number is over 88 - "Bye."
+for i in range(num):
+    current = int(input())
+    if current == 88:
+        print('Hello')
+    elif current== 86:
+        print("How are you?")
+    elif current < 88:
+        print('GREAT!')
+    elif current > 88:
+        print('Bye.')
