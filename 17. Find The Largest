@@ -1,0 +1,7 @@
+from typing import List
+
+number = int(input())
+number_as_string = str(number)
+final = (sorted(number_as_string, reverse=True))
+
+print(*final, sep='')
