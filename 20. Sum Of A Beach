@@ -1,0 +1,12 @@
+command = input()
+searched = ['sand', 'fish', 'water', 'sun']
+counter = 0
+command_lower = str.lower(command)
+for i in range(len(searched)):
+    index = 0
+    for j in range(len(command_lower)):
+        k = command_lower.find(searched[i], index)
+        if k != -1:
+            index = k + 1
+            counter += 1
+print(counter)
