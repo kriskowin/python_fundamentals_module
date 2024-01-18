@@ -1,0 +1,5 @@
+from typing import List
+
+word = input()
+indices = [index for index, char in enumerate(word) if char.isupper()]
+print(indices)
