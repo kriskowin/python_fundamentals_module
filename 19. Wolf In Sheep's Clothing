@@ -1,0 +1,10 @@
+command_as_list = input().split(',')
+
+for i in range(len(command_as_list)):
+    if command_as_list[i] == 'wolf':
+        if i != len(command_as_list) - 1:
+            print(f'Oi! Sheep number {(len(command_as_list) - 1) - i}! '
+                  f'You are about to be eaten by a wolf!')
+            break
+else:
+    print("Please go away and stop eating my sheep")
