@@ -1,0 +1,8 @@
+first_num = int(input())
+second_num = int(input())
+third_num = int(input())
+fourth_num = int(input())
+fis = first_num + second_num
+third = int(fis / third_num)
+final = third * fourth_num
+print(final)
