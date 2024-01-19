@@ -1,0 +1,6 @@
+n = int(input())
+final = 0
+for i in range(n):
+    current_letter = input()
+    final += ord(current_letter)
+print(f'The sum equals: {final}')
