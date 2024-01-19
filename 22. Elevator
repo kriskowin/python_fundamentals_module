@@ -1,0 +1,6 @@
+import math
+from math import ceil
+
+persons = int(input())
+capacity = int(input())
+print(math.ceil(persons/capacity))
