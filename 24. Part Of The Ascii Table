@@ -1,0 +1,4 @@
+start_step = int(input())
+stop_step = int(input())
+for i in range(start_step, stop_step + 1):
+    print(chr(i), end=' ')
