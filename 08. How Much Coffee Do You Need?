@@ -1,15 +1,16 @@
-coffees = 0
-command = ''
-while command != 'END':
+end = False
+total_coffees = 0
+while end == False:
     command = input()
- 
-    if command.lower():
-        coffees += 1
-    elif command.upper():
-        coffees += 2
-          
-if coffees < 5:
-    print(coffees)
-else:
-    print('You need extra sleep')
 
+    if command == 'END':
+        end = True
+    elif command == 'coding' or command == 'dog' or command == 'cat' or command == 'movie':
+        total_coffees += 1
+    elif command == 'CODING' or command == 'DOG' or command == 'CAT' or command == 'MOVIE':
+        total_coffees += 2
+if total_coffees > 5:
+    print('You need extra sleep')
+else:
+    print(total_coffees)
+    
