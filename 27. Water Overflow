@@ -1,0 +1,11 @@
+water_tank_capacity = 255
+n = int(input())
+
+for i in range(n):
+    upcoming_liters = int(input())
+    if water_tank_capacity - upcoming_liters < 0:
+        print(("Insufficient capacity!"))
+        continue
+    water_tank_capacity -= upcoming_liters
+print(255 - water_tank_capacity)
+
