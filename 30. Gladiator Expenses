@@ -1,0 +1,22 @@
+# •	On the first line, you will receive the lost fights count – an integer in the range [0, 1000].
+# •	On the second line, you will receive the helmet price - a floating-point number in the range [0, 1000].
+# •	On the third line, you will receive the sword price - a floating-point number in the range [0, 1000].
+# •	On the fourth line, you will receive the shield price - a floating-point number in the range [0, 1000].
+# •	On the fifth line, you will receive the armor price - a floating-point number in the range [0, 1000].
+lost_fights_counter = int(input())
+helmet_price = float(input())
+sword_price = float(input())
+shield_price = float(input())
+armor_price = float(input())
+
+helmet_broken = lost_fights_counter // 2
+sword_broken = lost_fights_counter // 3
+shield_broken = lost_fights_counter // (2*3)
+armor_broken = shield_broken // 2
+
+expenses = ((helmet_price * helmet_broken) +
+            (sword_price * sword_broken) +
+            (shield_price * shield_broken) +
+            (armor_broken * armor_price))
+
+print(f"Gladiator expenses: {expenses:.2f} aureus")
