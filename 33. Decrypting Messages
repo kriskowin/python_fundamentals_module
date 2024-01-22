@@ -1,0 +1,14 @@
+key = int(input())
+lines = int(input())
+my_list = []
+for current_letter in range(lines):
+    letter = input()
+    ord_letter = ord(letter) + key
+    to_be_chr = chr(ord_letter)
+    my_list.append(to_be_chr)
+print(*my_list,sep='')
+
+# On the first line, you will receive a key (integer). On the second line, you will receive n – the number of lines,
+# which will follow. On the next n lines – you will receive a lower and an uppercase letter per line.
+# You should add the key to each of the characters and append them to a message. 
+# In the end, print the decrypted message. 
