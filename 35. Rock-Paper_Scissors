@@ -1,0 +1,13 @@
+first_opportunity = input()
+second_opportunity = input()
+result = ''
+if first_opportunity == 'rock' and second_opportunity == 'scissors':
+    result = 'rock'
+elif first_opportunity == 'scissors' and second_opportunity == 'paper':
+    result = 'scissors'
+elif first_opportunity == 'rock' and second_opportunity == 'scissors':
+    result = 'paper'
+else:
+    result = 'draw'
+
+print(result)
