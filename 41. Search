@@ -1,0 +1,13 @@
+lines = int(input())
+special_word = input()
+list_with_all = []
+special_list = []
+
+for i in range(lines):
+    current_sentece = input()
+    list_with_all.append(current_sentece)
+    if special_word in current_sentece:
+        special_list.append(current_sentece)
+
+print(list_with_all)
+print(special_list)
