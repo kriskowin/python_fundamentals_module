@@ -1,0 +1,16 @@
+lines = int(input())
+positive = []
+negative = []
+current = 0
+for i in range(lines):
+    current = int(input())
+
+    if current < 0:
+        negative.append(current)
+    else:
+        positive.append(current)
+
+print(positive)
+print(negative)
+print(f'Count of positives: {len(positive)}')
+print(f'Sum of negatives: {sum(negative)}')
