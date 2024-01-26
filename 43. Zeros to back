@@ -1,0 +1,18 @@
+numbers = input().split(", ")
+counted_zeros = numbers.count('0')
+final_list = []
+for i in range(counted_zeros):
+    numbers.remove('0')
+    numbers.append('0')
+print(numbers)
+
+
+
+
+numbers = input()
+some_comprehension = [int(x) for x in numbers.split(", ")]
+zeros = some_comprehension.count(0)
+
+without_zeros = [num for num in some_comprehension if num != 0]
+result = without_zeros + [0] * zeros
+print(result)
