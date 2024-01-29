@@ -1,0 +1,14 @@
+money_as_string = input().split(", ")
+number_of_beggars = int(input())
+accumulated_sum = []
+for beggar in money_as_string:
+    accumulated_sum.append(int(beggar))
+final_sum = []
+index = 0
+for current_beggar in range(number_of_beggars):
+    current_beggar_sum = 0
+    for current_index in range(index, len(accumulated_sum), number_of_beggars):
+        current_beggar_sum += accumulated_sum[current_index]
+    final_sum.append(current_beggar_sum)
+    index += 1
+print(final_sum)
