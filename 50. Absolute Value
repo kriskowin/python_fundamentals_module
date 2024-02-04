@@ -1,0 +1,3 @@
+print([abs(float(number)) for number in input().split()])
+
+# Solution is similar as "List Basics - Invert Values"
