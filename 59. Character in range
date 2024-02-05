@@ -1,0 +1,15 @@
+# Write a function that receives two characters and returns a single string with 
+# all the characters in between them (according to the ASCII code), separated by a single space. 
+# Print the result on the console.
+
+def chars(start, end):
+    final = ''
+    for i in range(ord(start)+1, ord(end)):
+        final += chr(i) + ' '
+
+    return final
+
+
+starting = input()
+ending = input()
+print(chars(starting, ending))
