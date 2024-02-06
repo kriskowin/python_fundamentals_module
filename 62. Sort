@@ -1,0 +1,6 @@
+numbers = input().split()
+numbers_as_int = []
+for i in numbers:
+    numbers_as_int.append(int(i))
+numbers_as_int.sort()
+print(numbers_as_int)
