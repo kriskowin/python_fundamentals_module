@@ -1,0 +1,15 @@
+
+def odd_even(some_number):
+    even_digits = 0
+    odd_digits = 0
+    for i in str(some_number):
+        if int(i) % 2 == 0:
+            even_digits += int(i)
+        else:
+            odd_digits += int(i)
+
+    return f"Odd sum = {odd_digits}, Even sum = {even_digits}"
+
+
+number = int(input())
+print(odd_even(number))
