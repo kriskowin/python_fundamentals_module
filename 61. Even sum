@@ -1,0 +1,10 @@
+def even_numbers(some_numbers):
+    final = []
+    for i in numbers:
+        if int(i) % 2 == 0:
+            final.append(int(i))
+    return final
+
+
+numbers = input().split()
+print(even_numbers(numbers)) 
