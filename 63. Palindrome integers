@@ -1,0 +1,12 @@
+def palindrome_checker(numbers):
+    final = ''
+    for current_number in numbers:
+        if current_number == current_number[::-1]:
+            final += "True\n"
+        else:
+            final += "False\n"
+    return final
+
+
+nums = input().split(', ')
+print(palindrome_checker(nums))
