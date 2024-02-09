@@ -1,0 +1,3 @@
+word = input()
+vowels = ['a', 'u', 'e', 'i', 'o', 'A', 'U', 'E', 'I', 'O']
+print(''.join([x for x in word if x not in vowels]))
