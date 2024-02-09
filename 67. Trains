@@ -1,0 +1,21 @@
+wagons = [0] * int(input())
+
+while True:
+    command = input().split()
+    if command[0] == 'End':
+        print(wagons)
+        break
+
+    if command[0] == 'add':
+        people_qty = int(command[1])
+        wagons[-1] += people_qty
+
+    elif command[0] == 'insert':
+        wagon = int(command[1])
+        people_qty = int(command[2])
+        wagons[wagon] += people_qty
+
+    elif command[0] == 'leave':
+        wagon = int(command[1])
+        people_qty = int(command[2])
+        wagons[wagon] -= people_qty
