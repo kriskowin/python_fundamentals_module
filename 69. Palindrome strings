@@ -1,0 +1,12 @@
+words = input().split()
+magic_word = input()
+magic_counter = 0
+list_with_palindromes = []
+for current_word in words:
+    if current_word == current_word[::-1]:
+        list_with_palindromes.append(current_word)
+    if current_word == magic_word:
+        magic_counter += 1
+
+print(list_with_palindromes)
+print(f"Found palindrome {magic_counter} times")
