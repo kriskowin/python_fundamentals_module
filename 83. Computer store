@@ -1,0 +1,36 @@
+final_price = 0
+while True:
+    client_status = input()
+    if client_status == 'regular' or client_status == 'special':
+        break
+
+    price = float(client_status)
+
+    if price < 0:
+        print("Invalid price!")
+        continue
+
+    final_price += price
+
+if client_status == "special":
+    if final_price > 0:
+        final_price *= 0.9
+        print(f"Congratulations you've just bought a new computer!\n"
+              f"Price without taxes: {final_price:.2f}$\n"
+              f"Taxes: {(final_price / 5):.2f}$\n"
+              f"-----------\n"
+              f"Total price: {(final_price * 1.2):.2f}$")
+    else:
+        print("Invalid order!")
+
+elif client_status == "regular":
+    if final_price > 0:
+        print(f"Congratulations you've just bought a new computer!\n"
+              f"Price without taxes: {final_price:.2f}$\n"
+              f"Taxes: {(final_price / 5):.2f}$\n"
+              f"-----------\n"
+              f"Total price: {(final_price * 1.2):.2f}$")
+    else:
+        print("Invalid order!")
+
+
