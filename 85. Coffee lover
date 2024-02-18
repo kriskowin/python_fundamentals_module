@@ -1,0 +1,30 @@
+coffees_list = input().split()
+number_of_updates = int(input())
+for current_list_update in range(1, number_of_updates + 1):
+    command = input().split()
+
+    if command[0] == "Include":
+        coffees_list.append(command[1])
+
+    elif command[0] == "Remove":
+        if int(command[2]) > len(coffees_list):
+            continue
+        else:
+            if command[1] == "first":
+                for i in range(int(command[2])):
+                    del coffees_list[0]
+            elif command[1] == "last":
+                for i in range(int(command[2])):
+                    coffees_list.pop()
+
+    elif command[0] == "Prefer":
+        if int(command[2]) or int(command[1]) > len(coffees_list):
+            first = int(command[1])
+            second = int(command[2])
+            coffees_list[first], coffees_list[second] = coffees_list[second], coffees_list[first]
+
+    elif command[0] == "Reverse":
+        coffees_list.reverse()
+
+print("Coffees:")
+print(*coffees_list)
