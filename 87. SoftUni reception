@@ -1,0 +1,10 @@
+first = int(input())
+second = int(input())
+third = int(input())
+employee_efficiency = first + second + third
+students_counter = int(input())
+total_hours = round(students_counter / employee_efficiency)
+for i in range(int(total_hours)):
+    if i % 4 == 0:
+        total_hours += 1
+print(f"Time needed: {int(total_hours)}h.")
