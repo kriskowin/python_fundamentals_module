@@ -1,0 +1,8 @@
+elements = input().split()
+final = {}
+for index in range(0, len(elements), 2):
+    keys = elements[index]
+    values = elements[index + 1]
+    final[keys] = int(values)
+
+print(final)
