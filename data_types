@@ -1,0 +1,15 @@
+def data(magic_input):
+    if magic_input == "int":
+        final = int(other_input) * 2
+        return final
+    elif magic_input == "real":
+        final = float(other_input) * 1.5
+        return f"{final:.2f}"
+    else:
+        return f'${other_input}$'
+
+
+magic_input = input()
+other_input = input()
+final = ''
+print(data(magic_input))
