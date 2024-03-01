@@ -1,0 +1,16 @@
+products_and_qty = input().split()
+bakery = {}
+
+for i in range(0, len(products_and_qty), 2):
+    product = products_and_qty[i]
+    qty = int(products_and_qty[i + 1])
+    bakery[product] = qty
+
+searched_products = input().split()
+
+for product in searched_products:
+    if product in bakery:
+        print(f"We have {bakery[product]} of {product} left")
+
+    else:
+        print(f"Sorry, we don't have {product}")
