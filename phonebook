@@ -1,0 +1,19 @@
+my_phonebook = {}
+while True:
+    entry = input().split("-")
+    if entry[0].isdigit():
+        number = int(entry[0])
+        break
+
+    key, value = entry
+
+    if key not in my_phonebook:
+        my_phonebook[key] = value
+        # if value in my_phonebook and value !=
+
+for i in range(number):
+    searched_human = input()
+    if searched_human in my_phonebook:
+        print(f"{searched_human} -> {my_phonebook[searched_human]}")
+    else:
+        print(f"Contact {searched_human} does not exist.")
