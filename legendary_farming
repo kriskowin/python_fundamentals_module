@@ -1,0 +1,56 @@
+def legendary_obtained(crafting_material, quantity):
+    shards = False
+    fragments = False
+    motes = False
+    if crafting_material == "shards":
+        shards = True
+    elif crafting_material == "fragments":
+        fragments = True
+    elif crafting_material == "motes":
+        motes = True
+
+    if quantity > 250:
+        quantity_left = quantity - 250
+    else:
+        quantity_left = 0
+
+    if shards:
+        return "Shadowmourne obtained!", quantity_left
+    elif fragments:
+        return "Valanyr obtained!", quantity_left
+    elif motes:
+        return "Dragonwrath obtained!", quantity_left
+
+
+flag = False
+materials_dict = {}
+junk_dict = {}
+while True:
+    materials = input().split()
+    if not materials:
+        break
+
+    for i in range(1, len(materials), 2):
+        material = materials[i].lower()
+        if material == "shards" or material == "fragments" or material == "motes":
+            if material not in materials_dict.keys():
+                materials_dict[material] = 0
+            materials_dict[material] += int(materials[i - 1])
+            if materials_dict[material] >= 250:
+                legendary_item, materials_dict[material] = legendary_obtained(material, materials_dict[material])
+                print(legendary_item)
+                flag = True
+                break
+        else:
+            if material not in junk_dict:
+                junk_dict[material] = 0
+            junk_dict[material] += int(materials[i - 1])
+    if flag:
+        break
+    materials.clear()
+
+print(f"shards: {materials_dict.get('shards') if materials_dict.get('shards') is not None else 0}")
+print(f"fragments: {materials_dict.get('fragments') if materials_dict.get('fragments') is not None else 0}")
+print(f"motes: {materials_dict.get('motes') if materials_dict.get('motes') is not None else 0}")
+for key, value in junk_dict.items():
+    print(f"{key}: {value}")
