@@ -1,0 +1,16 @@
+mined_goods = {}
+while True:
+    command = input()
+    if command == 'stop':
+        break
+
+    key_of_goods = command
+    value_of_goods = int(input())
+    if key_of_goods not in mined_goods:
+        mined_goods[key_of_goods] = value_of_goods
+    else:
+        mined_goods[key_of_goods] += value_of_goods
+
+
+for key, value in mined_goods.items():
+    print(f"{key} -> {value}")
