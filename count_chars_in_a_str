@@ -1,0 +1,11 @@
+text = input().split()
+final = {}
+for word in text:
+    for letter in word:
+        if letter not in final:
+            final[letter] = 1
+        else:
+            final[letter] += 1
+
+for key, value in final.items():
+    print(f"{key} -> {value}")
