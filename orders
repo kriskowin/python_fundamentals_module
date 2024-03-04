@@ -1,0 +1,22 @@
+storage = {}
+while True:
+    command = input().split()
+    if command[0] == "buy":
+        break
+
+    product = command[0]
+    price = float(command[1])
+    quantity = int(command[2])
+
+    if product not in storage.keys():
+        storage[product] = {'price': price, 'quantity': quantity}
+
+    else:
+        storage[product] ['quantity'] += quantity
+
+        if storage[product] ['price'] != price:
+            storage[product] ['price'] = price
+
+for key, value in storage.items():
+    total = value['price'] * value['quantity']
+    print(f"{key} -> {total:.2f}")
