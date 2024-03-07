@@ -1,0 +1,7 @@
+unwanted = input()
+word = input()
+
+while unwanted in word:
+    word = word.replace(unwanted, '')
+
+print(word)
