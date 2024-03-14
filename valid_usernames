@@ -1,0 +1,29 @@
+def has_length(name):
+    if 3 <= len(name) <= 16:
+        return True
+    return False
+
+
+def contain(name):
+    for i in name:
+        if not (i.isalnum() or i == "-" or i == "_"):
+            return False
+    return True
+
+
+def no_redundant_symbols(name):
+    if " " in name:
+        return False
+    return True
+
+
+def valid_username(name):
+    if has_length(name) and contain(name) and no_redundant_symbols(name):
+        return True
+    return False
+
+
+usernames = input().split(", ")
+for username in usernames:
+    if valid_username(username):
+        print(username)
