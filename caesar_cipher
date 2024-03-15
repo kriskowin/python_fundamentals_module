@@ -1,0 +1,6 @@
+input_text = input()
+encrypted_version = ''
+for symbol in input_text:
+    encrypted_version += chr(ord(symbol) + 3)
+
+print(encrypted_version)
