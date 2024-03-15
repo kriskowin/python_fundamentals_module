@@ -1,0 +1,4 @@
+given_info = input().split("\\")
+filename_and_extension = given_info[-1].split(".")
+print(f"File name: {filename_and_extension[0]}")
+print(f"File extension: {filename_and_extension[1]}")
