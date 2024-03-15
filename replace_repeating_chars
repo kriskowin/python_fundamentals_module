@@ -1,0 +1,8 @@
+input_text = input()
+correct_letters = ''
+last_added_letter = ''
+for current_character in input_text:
+    if current_character != last_added_letter:
+        correct_letters += current_character
+        last_added_letter = current_character
+print(correct_letters)
