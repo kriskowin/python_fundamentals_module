@@ -1,0 +1,15 @@
+word = input()
+final = ''
+strength = 0
+for index in range(len(word)):
+    if strength > 0 and word[index] != ">":
+        strength -= 1
+
+    elif word[index] == ">":
+        final += word[index]
+        strength += int(word[index + 1])
+
+    else:
+        final += word[index]
+
+print(final)
