@@ -1,0 +1,12 @@
+import math
+text = input()
+emoji_list = []
+cool_threshold_list = [int(x) for x in text if x.isdigit()]
+cool_threshold = math.prod(cool_threshold_list)
+word_list = []
+
+# TODO
+
+print(f"Cool threshold: {cool_threshold}")
+print(word_list)
+
