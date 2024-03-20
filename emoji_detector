@@ -1,0 +1,44 @@
+import math
+text = input()
+cool_threshold_list = [int(x) for x in text if x.isdigit()]
+cool_threshold = math.prod(cool_threshold_list)
+keywords = []
+magic_words = []
+cool_words = []
+result = 0
+list_with_ords = []
+
+for word in text.split():
+    if word.startswith(":"):
+        keywords.append(word)
+    elif word.startswith("*"):
+        magic_words.append(word)
+
+for keyword in keywords:
+    if keyword.endswith(":"):
+        magic_words.append(keyword)
+    elif keyword.endswith("*"):
+        magic_words.append(keyword)
+
+for cool_word in magic_words:
+    if cool_word[2].isupper():
+        if len(cool_word) >= 7:
+            if cool_word[3:-2].islower() and cool_word[3:-2].isalpha():
+                cool_words.append(cool_word)
+
+for coolness in magic_words:
+    list_with_ords.append(result)
+    result = 0
+    for i in coolness:
+        result += ord(i)
+
+
+
+print(f"Cool threshold: {cool_threshold}")
+print(f"{len(cool_words)} emojis found in the text. The cool ones are:")
+for i in cool_words:
+    print(i)
+# print(magic_words)
+# print(list_with_ords)
+# print(cool_words)
+
