@@ -1,0 +1,15 @@
+import re
+data = input()
+points = 0
+pattern = r"(\=|\/)([A-Z][A-Za-z]{2,})\1"
+destinations = []
+result = re.finditer(pattern, data)
+
+for destination in result:
+    destinations.append(destination.group(2))
+    points += len(destination.group(2))
+
+
+print(f"Destinations: {', '.join(destinations)}")
+
+print(f"Travel Points: {points}")
