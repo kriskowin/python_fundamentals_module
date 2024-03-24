@@ -1,0 +1,45 @@
+stock = {}
+sold_counter = 0
+
+while True:
+
+    command = input().split()
+
+    if command[0] == "Complete":
+        break
+
+    if command[0] == "Receive":
+        quantity = int(command[1])
+        product = command[2]
+
+        if quantity > 0:
+            if product not in stock.keys():
+                stock[product] = quantity
+
+    elif command[0] == "Sell":
+        quantity = int(command[1])
+        product = command[2]
+
+        if product not in stock.keys():
+            print(f"You do not have any {product}.")
+            continue
+
+        if stock[product] >= quantity:
+            stock[product] -= quantity
+            sold_counter += quantity
+            print(f"You sold {quantity} {product}.")
+
+            if stock[product] == 0:
+                del stock[product]
+
+        else:
+            sold = stock[product]
+            sold_counter += sold
+            print(f"There aren't enough {product}. You sold the last {sold} of them.")
+
+            del stock[product]
+
+for food, qty in stock.items():
+    print(f"{food}: {qty}")
+
+print(f"All sold: {sold_counter} goods")
