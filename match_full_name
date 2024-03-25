@@ -1,0 +1,7 @@
+import re
+
+text = input()
+pattern = r"\b[A-Z][a-z]+ [A-Z][a-z]+\b"
+result = re.findall(pattern, text)
+for current_name in result:
+    print(current_name, end=" ")
